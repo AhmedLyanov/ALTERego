@@ -1,0 +1,244 @@
+$main-color-light: rgba(255, 255, 255, 1);
+$main-color-opacity: rgba(96, 143, 86, 1);
+$main-color-button-green-background: rgba(36, 93, 24, 1);
+$main-color-button-white: #ffffff;
+$font-size-navigation: 15px;
+$main-font-family: "Cabin", sans-serif;
+$color-link: #000000;
+
+@mixin big-button(
+  $size-text,
+  $button-width,
+  $button-height,
+  $text-color-button,
+  $color-background-button,
+  $border-button
+) {
+  width: $button-width;
+  height: $button-height;
+  color: $text-color-button;
+  background: $color-background-button;
+  font-size: $size-text;
+  border-radius: 12px;
+  font-weight: 600;
+  line-height: 100%;
+  font-weight: 600;
+  font-family: $main-font-family;
+  border: $border-button;
+}
+
+@mixin bottom-content-panel {
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.09);
+  background: $main-color-light;
+  padding: 30px;
+}
+@mixin text-bottom_panel() {
+  font-family: $main-font-family;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.container__hero-banner_section {
+  height: max-content;
+  display: flex;
+}
+
+.hero-banner_content {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(180deg, #e4ffdf 0%, #9fd595 100%);
+  padding: 75px 45px 45px;
+}
+.hero-banner_image {
+  height: auto;
+  width: 50%;
+}
+.background-hero_banner_image {
+  background: url(../../assets/media/hero-banner.webp);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.container__hero-banner-title__decription {
+  display: grid;
+  gap: 25px;
+}
+.hero-banner__text-information {
+  display: grid;
+  gap: 43px;
+}
+.title__hero_banner h1 {
+  font-family: $main-font-family;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
+  .title__span-hero-banner-part-1 {
+    color: $main-color-opacity;
+  }
+  .title__span-hero-banner-part-2 {
+    color: $main-color-button-green-background;
+  }
+}
+
+.description__hero_banner {
+  font-family: $main-font-family;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  opacity: 70%;
+  color: $main-color-button-green-background;
+}
+
+.main_container__buttons-hero-banner {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.button__hero-banner {
+  &-primary {
+    @include big-button(
+      16px,
+      219px,
+      50px,
+      $main-color-light,
+      $main-color-button-green-background,
+      0px
+    );
+  }
+
+  &-secondary {
+    @include big-button(
+      16px,
+      219px,
+      50px,
+      $main-color-button-green-background,
+      $main-color-button-white,
+      2px solid $main-color-button-green-background
+    );
+  }
+}
+
+.bottom__panel-hero-banner {
+  margin-top: 43px;
+}
+
+.bottom__panel-hero-banner {
+  display: grid;
+  gap: 28px;
+}
+
+.panel__advantages {
+  @include bottom-content-panel;
+  width: 462px;
+  height: 217px;
+}
+.panel__price_educational {
+  @include bottom-content-panel;
+  width: 462px;
+  height: 137px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.panel__advantages h2 {
+  @include text-bottom_panel;
+}
+
+.panel_price__text_information h2 {
+  @include text-bottom_panel;
+}
+
+.container__panel_advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.card__advantage {
+  width: 180px;
+  padding: 15px;
+  display: flex;
+  gap: 8px;
+}
+
+.container__advantage_description {
+  display: grid;
+  gap: 8px;
+
+  .title__card-advantage {
+    font-family: $main-font-family;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+  }
+
+  .description__card-advantage {
+    font-family: $main-font-family;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    opacity: 52%;
+  }
+}
+
+.panel_price__text_information {
+  display: grid;
+  gap: 9px;
+
+  .container__price_counter {
+    display: flex;
+    gap: 7.5px;
+    align-items: flex-end;
+    .active__price {
+      font-family: $main-font-family;
+      font-weight: 600;
+      line-height: 100%;
+      letter-spacing: 0%;
+      font-size: 24px;
+      vertical-align: middle;
+    }
+
+    .no_active__price {
+      font-family: Inter;
+      font-weight: 600;
+      font-style: Semi Bold;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      opacity: 38%;
+      text-decoration: line-through;
+    }
+  }
+}
+
+.notes__price_counter {
+  font-family: $main-font-family;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 10px;
+  opacity: 40%;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+
+
+.button_price_panel__set_request{
+  @include big-button(12px, 158px, 38px, $main-color-light, $main-color-button-green-background, 0px)
+}

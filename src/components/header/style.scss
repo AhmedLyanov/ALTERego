@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+//variables
+$main-color-light: rgba(255, 255, 255, 1);
+$main-color-button-green-background: rgba(36, 93, 24, 1);
+$main-color-button-white: #ffffff;
+$font-size-navigation: 15px;
+$main-font-family: "Cabin", sans-serif;
+$color-link: #000000;
+
+//Mixins
+@mixin big-button(
+  $size-text,
+  $button-width,
+  $button-height,
+  $text-color-button,
+  $color-background-button,
+  $border-button
+) {
+  width: $button-width;
+  height: $button-height;
+  color: $text-color-button;
+  background: $color-background-button;
+  font-size: $size-text;
+  border-radius: 12px;
+  font-weight: 600;
+  line-height: 100%;
+  font-weight: 600;
+  font-family: $main-font-family;
+  border: $border-button;
+}
+
+// selector, property, value
+header {
+  height: 60px;
+  width: 100%;
+  background-color: $main-color-light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 45px 8px 45px;
+}
+.navigation__main_container {
+  display: flex;
+  gap: 52px;
+}
+.navigation__link a {
+  font-size: $font-size-navigation;
+  text-decoration: none;
+  color: $color-link;
+  font-weight: 400;
+  font-family: $main-font-family;
+  line-height: 100%;
+  opacity: 70%;
+  letter-spacing: 0%;
+}
+
+.container__header_left_content {
+  display: flex;
+  align-items: center;
+  gap: 41px;
+}
+.container__buttons_panel {
+  display: flex;
+  gap: 19px;
+}
+
+
+
+.button__main_content-empty {
+  @include big-button(
+    11px,
+    107px,
+    35px,
+    $color-link,
+    transparent,
+    1px solid $main-color-button-green-background
+  );
+  cursor: pointer;
+}
+
+.button__main_content-green {
+  @include big-button(
+    11px,
+    161px,
+    35px,
+    $main-color-button-white,
+    $main-color-button-green-background,
+    1px solid $main-color-button-green-background
+  );
+  cursor: pointer;
+}
