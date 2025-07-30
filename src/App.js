@@ -11,6 +11,7 @@ function App() {
         <Section_Banner />
         <Training/>
         <Statistics/>
+       
       </main>
     </>
   );

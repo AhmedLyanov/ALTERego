@@ -1,0 +1,28 @@
+$main-background-green-graident: radial-gradient(50% 50% at 50% 50%, #C2EABB 0%, #E3FFDE 100%);
+$base-font-title: sans-serif;
+$base-font-weight-title: 600;
+$base-size-title: 40px;
+$height-title: 100%;
+$base-color-title: rgba(0, 0, 0, 1);;
+
+.container__statistics_list{
+    background: $main-background-green-graident;
+    padding-top: 90px;
+    padding-inline: 65px;
+    display: grid;
+    justify-content: center;
+    gap: 80px;
+}
+
+.list__statistics_content{
+    display: grid;
+    gap: 40px;
+    h4{
+        font-size: $base-size-title;
+        font-weight: $base-font-weight-title;
+        font-family: $base-font-title;
+        line-height: $height-title;
+        color: $base-color-title;
+        text-align: center;
+    }
+}
